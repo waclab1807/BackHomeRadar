@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ObjectControl</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">Znajdź drogę powrotną</string>
+    <string name="gps">Compass</string>
+    <string name="main">Aplikacja do kontroli obiektu w określonym obszarze</string>
+    <string name="actual">Aktualne współrzędne to:</string>
+    <string name="longt">Długość:</string>
+    <string name="latt">Szerokość:</string>
+    <string name="moment">chwileczkę...</string>
+    <string name="giveNumber">Podaj numer:</string>
+    <string name="prog">Ustal próg:</string>
+    <string name="actualProg">Aktualnie:</string>
+    <string name="emptyNumber">Podaj numer!</string>
+    <string name="sms">Obiekt wyszedł poza wyznaczony obszar!\nJego współrzędne to:\n</string>
+    <string name="sms2">Pamiętaj, aby ponownie ustawić aplikację.</string>
+    <string name="on">Włącz</string>
+    <string name="off">Wyłącz</string>
+    <string name="noPhnumber">Najpierw podaj numer!</string>
+    <string name="badPhnumber">Sprawdź numer!</string>
+    <string name="alert">UWAGA! Obiekt wyszedł poza wyznaczony obszar!\nWysyłam wiadomość na numer:\n</string>
+    <string name="newPosition">Nowe współrzędne:\n</string>
+    <string name="startApp">Podaj numer telefonu, ustaw wielkość obszaru, a następnie włącz.</string>
+    <string name="backButton">Naciśnij cofnij jeszcze raz, aby wyjść.</string>
+    <string name="about">O autorze</string>
+    <string name="finish">Zakończ</string>
+
+
+</resources>

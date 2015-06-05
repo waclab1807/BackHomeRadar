@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/media/waclab1807/154E-C0EC/Radar/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/18.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dafab6ae358e6c801605d50ff1fa761e77200c1a">
+        <dex dex="/media/waclab1807/154E-C0EC/Radar/app/build/intermediates/pre-dexed/debug/classes-f68fa007676de87c3c3f9312507d1b1cd54e5071.jar" />
+    </item>
+
+</items>
