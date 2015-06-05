@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 8
+    compileSdkVersion 19
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "pl.wlabuda.multiapplication"
-        minSdkVersion 10
-        targetSdkVersion 14
+        applicationId "pl.wlabuda.backhomeradar"
+        minSdkVersion 14
+        targetSdkVersion 19
     }
 
     buildTypes {
@@ -18,7 +18,3 @@ android {
     }
 }
 
-dependencies {
-    compile 'com.android.support:gridlayout-v7:18.0.0'
-    compile 'com.android.support:gridlayout-v7:18.0.0'
-}

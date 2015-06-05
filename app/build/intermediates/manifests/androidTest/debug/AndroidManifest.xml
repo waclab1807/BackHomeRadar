@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.wlabuda.multiapplication.test">
+    package="pl.wlabuda.backhomeradar.test">
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="14" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="pl.wlabuda.multiapplication"
+                     android:targetPackage="pl.wlabuda.backhomeradar"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for pl.wlabuda.multiapplication"/>
+                     android:label="Tests for pl.wlabuda.backhomeradar"/>
 </manifest>

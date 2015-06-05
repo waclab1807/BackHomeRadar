@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="pl.wlabuda.backhomeradar"
-      android:versionCode="1"
-      android:versionName="1.0">
+      package="pl.wlabuda.backhomeradar">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <application android:icon="@drawable/objectcontrol" android:label="@string/app_name" android:name="pl.wlabuda.backhomeradar.Global">
+    <application
+        android:icon="@drawable/backhomeradaricon"
+        android:allowBackup="true"
+        android:screenOrientation="nosensor"
+        android:configChanges="orientation|keyboardHidden"
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name" >
         <activity android:name="pl.wlabuda.backhomeradar.RightWay"
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">
@@ -15,13 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="pl.wlabuda.backhomeradar.Compass"></activity>
-        <activity android:name="pl.wlabuda.backhomeradar.Gps2sms"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
 
     </application>
-    <uses-sdk android:minSdkVersion="15"
-        android:targetSdkVersion="17" />
 
 </manifest> 

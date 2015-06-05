@@ -1,35 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="GridLayout"><attr name="orientation"><enum name="horizontal" value="0"/><enum name="vertical" value="1"/></attr><attr format="integer" name="rowCount"/><attr format="integer" name="columnCount"/><attr format="boolean" name="useDefaultMargins"/><attr name="alignmentMode"><enum name="alignBounds" value="0"/><enum name="alignMargins" value="1"/></attr><attr format="boolean" name="rowOrderPreserved"/><attr format="boolean" name="columnOrderPreserved"/></declare-styleable>
-    <declare-styleable name="GridLayout_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_margin"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginRight"/><attr name="android:layout_marginBottom"/><attr format="integer" name="layout_row"/><attr format="integer" min="1" name="layout_rowSpan"/><attr format="integer" name="layout_column"/><attr format="integer" min="1" name="layout_columnSpan"/><attr name="layout_gravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr></declare-styleable>
-    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/18.0.0/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="default_gap">16dip</dimen>
     <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about">O autorze</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <string name="actual">Aktualne współrzędne to:</string>
     <string name="actualProg">Aktualnie:</string>
     <string name="alert">UWAGA! Obiekt wyszedł poza wyznaczony obszar!\nWysyłam wiadomość na numer:\n</string>
-    <string name="app_name">ObjectControl</string>
+    <string name="app_name">BackHomeRadar</string>
     <string name="backButton">Naciśnij cofnij jeszcze raz, aby wyjść.</string>
     <string name="badPhnumber">Sprawdź numer!</string>
+    <string name="cantUse">Nie możesz używać aplikacji bez GPS</string>
     <string name="emptyNumber">Podaj numer!</string>
     <string name="finish">Zakończ</string>
-    <string name="giveNumber">Podaj numer:</string>
-    <string name="gps">Compass</string>
-    <string name="hello">Znajdź drogę powrotną</string>
+    <string name="giveNumber">Podaj numer telefonu na jaki wysłać powiadomienie:</string>
+    <string name="gps" translatable="false">Compass</string>
+    <string name="gpsDialog">GPS wyłączony, chcesz go włączyć?</string>
+    <string name="hello" translatable="false">Znajdź drogę powrotną</string>
+    <string name="info">W budynku GPS może być niedokładny!</string>
     <string name="latt">Szerokość:</string>
     <string name="longt">Długość:</string>
     <string name="main">Aplikacja do kontroli obiektu w określonym obszarze</string>
-    <string name="moment">chwileczkę...</string>
+    <string name="moment">szukam...</string>
     <string name="newPosition">Nowe współrzędne:\n</string>
+    <string name="no">NIE</string>
+    <string name="noGSM">Przykro mi, to urządzenie nie może wysyłać SMS.</string>
     <string name="noPhnumber">Najpierw podaj numer!</string>
     <string name="off">Wyłącz</string>
     <string name="on">Włącz</string>
-    <string name="prog">Ustal próg:</string>
+    <string name="prog">Ustaw obszar:</string>
     <string name="sms">Obiekt wyszedł poza wyznaczony obszar!\nJego współrzędne to:\n</string>
     <string name="sms2">Pamiętaj, aby ponownie ustawić aplikację.</string>
-    <string name="startApp">Podaj numer telefonu, ustaw wielkość obszaru, a następnie włącz.</string>
+    <string name="startApp">1.Podaj numer telefonu, \n2.Ustaw wielkość obszaru, \n3.Kliknij włącz.</string>
+    <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
+    <string name="yes">TAK</string>
+    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#212121</item><!--90A4AE-->
+        <item name="android:height">75dp</item>
+    </style>
+    <style name="TextColor" parent="android:Theme.Holo.Light">
+        <item name="android:textColor">#E0E0E0</item>
+        <item name="android:typeface">monospace</item>
+    </style>
 </resources>
