@@ -27,12 +27,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RightWay extends Activity {
+public class RightWay extends Activity implements SensorEventListener{
 
+    private static SensorManager mySensorManager;
+    private boolean sersorrunning;
 	private MyWayView myCompassView;
 	private TextView dystans;
-	private TextView pamiec1;
-	private TextView pamiec2;
+    private TextView waiting;
+    private TextView longitude;
+    private TextView latitude;
 	private LocationManager lm;
 	private LocationListener locationListener;
 	private Location locB;
@@ -44,6 +47,7 @@ public class RightWay extends Activity {
     private Button Start;
     private Button Stop;
     private Button Reset;
+    private Boolean zmienna = false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -55,9 +59,10 @@ public class RightWay extends Activity {
         //actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
 
-		pamiec1 = (TextView) findViewById(R.id.pamiec1);
-		pamiec2 = (TextView) findViewById(R.id.pamiec2);
 		dystans = (TextView) findViewById(R.id.dystans);
+        waiting = (TextView) findViewById(R.id.waiting);
+        longitude = (TextView) findViewById(R.id.longitude);
+        latitude = (TextView) findViewById(R.id.latitude);
         Start = (Button) findViewById(R.id.start);
         Stop = (Button) findViewById(R.id.stop);
         Reset = (Button) findViewById(R.id.reset);
@@ -65,6 +70,9 @@ public class RightWay extends Activity {
         Stop.setEnabled(false);
         Start.setEnabled(false);
         Reset.setEnabled(false);
+        Start.setTextColor(Color.GRAY);
+        Stop.setTextColor(Color.GRAY);
+        Reset.setTextColor(Color.GRAY);
 
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
 
@@ -86,12 +94,39 @@ public class RightWay extends Activity {
 		locationListener);
 		myCompassView = (MyWayView) findViewById(R.id.mycompassview);
 
-		Toast.makeText(
-				this,
-				"Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.",
-				Toast.LENGTH_LONG).show();
-		Toast.makeText(this, "Naciśnij STOP aby odnaleźć drogę powrotną.",
-				Toast.LENGTH_LONG).show();
+        mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        List<Sensor> mySensors = mySensorManager
+                .getSensorList(Sensor.TYPE_ORIENTATION);
+
+        if (mySensors.size() > 0) {
+            mySensorManager.registerListener(mySensorEventListener,
+                    mySensors.get(0), SensorManager.SENSOR_DELAY_NORMAL);
+            sersorrunning = true;
+        } else {
+            Toast.makeText(this, "Brak czujnika orientacji", Toast.LENGTH_LONG)
+                    .show();
+            sersorrunning = false;
+            finish();
+        }
+
+//		Toast.makeText(
+//				this,
+//				"Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.",
+//				Toast.LENGTH_LONG).show();
+//		Toast.makeText(this, "Naciśnij STOP aby odnaleźć drogę powrotną.",
+//				Toast.LENGTH_LONG).show();
+
+        Reset.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Start.setEnabled(true);
+                Reset.setEnabled(false);
+                zmienna = false;
+                Global.wybor = 5;
+                Start.setTextColor(Color.GREEN);
+                Reset.setTextColor(Color.WHITE);
+            }
+        });
 	}
 
     private void buildAlertMessageNoGps() {
@@ -106,6 +141,7 @@ public class RightWay extends Activity {
                 .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
                         dialog.cancel();
+                        finish();
                     }
                 });
         final AlertDialog alert = builder.create();
@@ -144,39 +180,39 @@ public class RightWay extends Activity {
 	public class MyLocationListener implements LocationListener {
 		public float locALa = 0;
 		public float locALo = 0;
-		private float actualLa;
-		private float actualLo;
 		private double locBLa;
 		private double locBLo;
-		double x;
-		double y;
+        int zaokr = (int) Math.pow(10, 5);;
 
 		public void onLocationChanged(final Location loc) {
 			if (loc != null) {
+                double a = loc.getLatitude();
+                double b = loc.getLongitude();
+                a *= zaokr;
+                a = Math.round(a);
+                a /= zaokr;
 
-                Start.setEnabled(true);
-                Start.setText("Start");
-                Start.setTextColor(Color.WHITE);
-				actualLa = (float) loc.getLatitude();
-				actualLo = ((float) loc.getLongitude());
+                b *= zaokr;
+                b = Math.round(b);
+                b /= zaokr;
+
+                longitude.setText(b + "");
+                latitude.setText(a + "");
+                if (!zmienna){
+                    Start.setEnabled(true);
+                    Start.setTextColor(Color.GREEN);
+                }
+                waiting.setText("");
 
 				Start.setOnClickListener(new OnClickListener() {
 
 					@Override
 					public void onClick(View v) {
                         Stop.setEnabled(true);
+                        Stop.setTextColor(Color.GREEN);
                         Start.setEnabled(false);
-						double a = loc.getLatitude();
-						double b = loc.getLongitude();
-						int zaokr = (int) Math.pow(10, 5);
-						a *= zaokr;
-						a = Math.round(a);
-						a /= zaokr;
-
-						b *= zaokr;
-						b = Math.round(b);
-						b /= zaokr;
-						pamiec1.setText(" Zapamiętano");
+                        Start.setTextColor(Color.WHITE);
+                        zmienna = true;
 						locALa = (float) loc.getLatitude();
 						locALo = ((float) loc.getLongitude());
 
@@ -188,19 +224,11 @@ public class RightWay extends Activity {
 					@Override
 					public void onClick(View v) {
                         Stop.setEnabled(false);
-                        Start.setEnabled(false);
-						double a = loc.getLatitude();
-						double b = loc.getLongitude();
-						int zaokr = (int) Math.pow(10, 5);
-						a *= zaokr;
-						a = Math.round(a);
-						a /= zaokr;
+                        Stop.setTextColor(Color.WHITE);
+                        Reset.setTextColor(Color.RED);
+                        Reset.setEnabled(true);
+                        zmienna = true;
 
-						b *= zaokr;
-						b = Math.round(b);
-						b /= zaokr;
-
-						pamiec2.setText("  Zapamiętano");
 						locBLa = ((float) loc.getLatitude());
 						locBLo = ((float) loc.getLongitude());
 
@@ -211,17 +239,20 @@ public class RightWay extends Activity {
 						locB.setLatitude(locBLa);
 						locB.setLongitude(locBLo);
 
-						Global.bearing = locA.bearingTo(locB);
+                        //Global.bearing = locA.bearingTo(locB);
+                        //System.out.println("**********************1 "+Global.bearing);
 
 						distance = locA.distanceTo(locB);
-						c = distance;
-						// c *= zaokr;
-						// c = Math.round(c);
-						// c /= zaokr;
-						x = locALa - actualLa;
-						y = locALo - actualLo;
+                        //System.out.println("**********************2 "+distance);
+                        c = distance;
+						c *= zaokr;
+						c = Math.round(c);
+						c /= zaokr;
+						    //x = locALa - actualLa;
+						    //y = locALo - actualLo;
 						// zielone
 						if (c <= 15) {
+                            dystans.setTextColor(Color.GREEN);
 							dystans.setText("" + c + " m");
 							// 1
 							// if(x == 0 && y > 0){
@@ -230,6 +261,7 @@ public class RightWay extends Activity {
 						}
 						// zolte
 						if (c > 15 && c < 99) {
+                            dystans.setTextColor(Color.YELLOW);
 							dystans.setText("" + c + " m");
 							// 1
 							// if(x == 0 && y > 0){
@@ -238,60 +270,19 @@ public class RightWay extends Activity {
 						}
 						// czerwone
 						if (c >= 999) {
+                            dystans.setTextColor(Color.RED);
 							dystans.setText("" + c / 1000 + " km");
 							// 1
 							// if(x == 0 && y > 0){
 							Global.wybor = 1;
 							// }
 						}
-						if (c <= 5) {
+						if (c <= 3) {
 							Global.wybor = 4;
 						}
 					}
-
 				});
-				if (this.locALa != 0.0 && this.locALo != 0.0
-						&& this.locBLa != 0.0 && this.locBLo != 0.0) {
-					locA = new Location(ACCESSIBILITY_SERVICE);
-					locB = new Location(ACCESSIBILITY_SERVICE);
-					locA.setLatitude(this.locALa);
-					locA.setLongitude(this.locALo);
-					locB.setLatitude(loc.getLatitude());
-					locB.setLongitude(loc.getLongitude());
-					distance = locA.distanceTo(locB);
-					// int zaokr1 = (int) Math.pow(10, 2);
-					c = distance;
-					// c *= zaokr1;
-					// c = Math.round(c);
-					// c /= zaokr1;
-					if (c <= 15) {
-						dystans.setText("" + c + " m");
-						// 1
-						// if(x == 0 && y > 0){
-						Global.wybor = 3;
-						// }
-					}
-					if (c > 15 && c < 99) {
-						dystans.setText("" + c + " m");
-						// 1
-						// if(x == 0 && y > 0){
-						Global.wybor = 2;
-						// }
-					}
-					if (c >= 999) {
-						dystans.setText("" + c / 1000 + " km");
-						// 1
-						// if(x == 0 && y > 0){
-						Global.wybor = 1;
-						// }
-					}
-					if (c <= 5) {
-						Global.wybor = 4;
-					}
-				}
-
 			}
-
 		}
 
 		public void onProviderDisabled(String provider) {
@@ -311,12 +302,42 @@ public class RightWay extends Activity {
 
 	}
 
+    private SensorEventListener mySensorEventListener = new SensorEventListener() {
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            // TODO Auto-generated method stub
+
+        }
+
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            // TODO Auto-generated method stub
+            myCompassView.updateDirection((float) event.values[0]);
+            Global.angel = (float) event.values[0];
+        }
+    };
 
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
+        if (sersorrunning) {
+            mySensorManager.unregisterListener(mySensorEventListener);
+        }
 	}
+
+    @Override
+    public void onAccuracyChanged(Sensor arg0, int arg1) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        // TODO Auto-generated method stub
+
+    }
 
     @Override
     public void onBackPressed() {

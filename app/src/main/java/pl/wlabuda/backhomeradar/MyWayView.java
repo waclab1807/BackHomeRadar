@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -73,7 +74,7 @@ public class MyWayView extends View {
 		paint1zz.setStrokeWidth(10);
 		paint1zz.setColor(Color.GREEN);
 
-		firstDraw = true;
+        firstDraw = true;
 	}
 
 	@Override
@@ -104,7 +105,7 @@ public class MyWayView extends View {
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.7), paint11);
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.6), paint11);
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.4), paint11);
-		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.2), paint11);
+		canvas.drawCircle(cxCompass, cyCompass, (float) (radiusCompass * 0.2), paint11);
 
 		if (!firstDraw) {
 			switch (Global.wybor) {
@@ -151,6 +152,11 @@ public class MyWayView extends View {
 				canvas.drawCircle((cxCompass), (cyCompass), 90, paint1zz);
 				canvas.restore();
 				break;
+            case 5:
+                    canvas.save();
+                    //canvas.drawCircle((cxCompass), (cyCompass), 90, paint1zz);
+                    canvas.restore();
+                    break;
 			default:
 
 			}
@@ -164,5 +170,4 @@ public class MyWayView extends View {
 		direction = dir;
 		invalidate();
 	}
-
 }
