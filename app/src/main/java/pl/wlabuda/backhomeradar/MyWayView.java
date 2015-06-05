@@ -97,15 +97,12 @@ public class MyWayView extends View {
 		} else {
 			radiusCompass = (float) (cxCompass * 0.9);
 		}
-		canvas.drawCircle(cxCompass, cyCompass, radiusCompass, paint);
-		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.95), paint11);
-		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.9), paint11);
-		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.85), paint11);
+		//canvas.drawCircle(cxCompass, cyCompass, radiusCompass, paint);
+        canvas.drawCircle(cxCompass, cyCompass, radiusCompass, paint11);
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.8), paint11);
-		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.7), paint11);
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.6), paint11);
 		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.4), paint11);
-		canvas.drawCircle(cxCompass, cyCompass, (float) (radiusCompass * 0.2), paint11);
+		canvas.drawCircle(cxCompass, cyCompass, (float)(radiusCompass*0.2), paint11);
 
 		if (!firstDraw) {
 			switch (Global.wybor) {
@@ -114,7 +111,7 @@ public class MyWayView extends View {
 				canvas.save();
 				canvas.rotate(-Global.angel, cxCompass, cyCompass);
 				canvas.drawLine(cxCompass, cyCompass, (float) (cxCompass),
-						(float) (cyCompass - radiusCompass), paint1c);
+						(cyCompass - radiusCompass), paint1c);
 				canvas.drawLine(cxCompass - 2, cyCompass - radiusCompass + 2,
 						cxCompass + 20, cyCompass - radiusCompass + 20, paint1c);
 				canvas.drawLine(cxCompass + 2, cyCompass - radiusCompass + 2,
@@ -126,7 +123,7 @@ public class MyWayView extends View {
 				canvas.save();
 				canvas.rotate(-Global.angel, cxCompass, cyCompass);
 				canvas.drawLine(cxCompass, cyCompass, (float) (cxCompass),
-						(float) (cyCompass - radiusCompass), paint1z);
+						(cyCompass - radiusCompass), paint1z);
 				canvas.drawLine(cxCompass - 2, cyCompass - radiusCompass + 2,
 						cxCompass + 20, cyCompass - radiusCompass + 20, paint1z);
 				canvas.drawLine(cxCompass + 2, cyCompass - radiusCompass + 2,
@@ -138,23 +135,22 @@ public class MyWayView extends View {
 				canvas.save();
 				canvas.rotate(-Global.angel, cxCompass, cyCompass);
 				canvas.drawLine(cxCompass, cyCompass, (float) (cxCompass),
-						(float) (cyCompass - radiusCompass), paint1zz);
+						(cyCompass - radiusCompass), paint1zz);
 				canvas.drawLine(cxCompass - 2, cyCompass - radiusCompass + 2,
 						cxCompass + 20, cyCompass - radiusCompass + 20,
 						paint1zz);
 				canvas.drawLine(cxCompass + 2, cyCompass - radiusCompass + 2,
 						cxCompass - 20, cyCompass - radiusCompass + 20,
-						paint1zz);
+                        paint1zz);
 				canvas.restore();
-				break;
-			case 4:
-				canvas.save();
+                break;
+                case 4:
+                    canvas.save();
 				canvas.drawCircle((cxCompass), (cyCompass), 90, paint1zz);
 				canvas.restore();
 				break;
             case 5:
                     canvas.save();
-                    //canvas.drawCircle((cxCompass), (cyCompass), 90, paint1zz);
                     canvas.restore();
                     break;
 			default:

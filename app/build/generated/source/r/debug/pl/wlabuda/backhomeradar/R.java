@@ -13,11 +13,9 @@ public final class R {
     public static final class drawable {
         public static final int author=0x7f020000;
         public static final int backhomeradaricon=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int kompas2=0x7f020003;
-        public static final int linear=0x7f020004;
-        public static final int myicon=0x7f020005;
-        public static final int objectcontrol=0x7f020006;
+        public static final int linear=0x7f020002;
+        public static final int metal=0x7f020003;
+        public static final int objectcontrol=0x7f020004;
     }
     public static final class id {
         public static final int dystans=0x7f06000b;
@@ -29,8 +27,8 @@ public final class R {
         public static final int reset=0x7f06000c;
         public static final int start=0x7f060007;
         public static final int stop=0x7f060009;
+        public static final int textView=0x7f060001;
         public static final int textView10=0x7f060000;
-        public static final int textView121=0x7f060001;
         public static final int textView122=0x7f060003;
         public static final int textView3=0x7f06000a;
         public static final int waiting=0x7f060005;
@@ -48,29 +46,34 @@ public final class R {
         public static final int backButton=0x7f040017;
         public static final int badPhnumber=0x7f040005;
         public static final int cantUse=0x7f040018;
+        public static final int cantUseOrient=0x7f040019;
+        public static final int distance=0x7f04001a;
         public static final int emptyNumber=0x7f040006;
-        public static final int finish=0x7f040019;
+        public static final int finish=0x7f04001b;
         public static final int giveNumber=0x7f040007;
         public static final int gps=0x7f040008;
-        public static final int gpsDialog=0x7f04001a;
+        public static final int gpsDialog=0x7f04001c;
         public static final int hello=0x7f040009;
-        public static final int info=0x7f04001b;
+        public static final int info=0x7f04001d;
         public static final int latt=0x7f04000a;
         public static final int longt=0x7f04000b;
         public static final int main=0x7f04000c;
         public static final int moment=0x7f04000d;
         public static final int newPosition=0x7f04000e;
-        public static final int no=0x7f04001c;
-        public static final int noGSM=0x7f04001d;
         public static final int noPhnumber=0x7f04000f;
         public static final int off=0x7f040010;
         public static final int on=0x7f040011;
         public static final int prog=0x7f040012;
+        public static final int saved=0x7f04001e;
         public static final int sms=0x7f040013;
         public static final int sms2=0x7f040014;
+        public static final int start=0x7f04001f;
         public static final int startApp=0x7f040015;
-        public static final int waiting=0x7f04001e;
-        public static final int yes=0x7f04001f;
+        public static final int stop=0x7f040020;
+        public static final int toast1=0x7f040021;
+        public static final int toast2=0x7f040022;
+        public static final int waiting=0x7f040023;
+        public static final int yes=0x7f040024;
     }
     public static final class style {
         public static final int AlertDialogCustom=0x7f050000;

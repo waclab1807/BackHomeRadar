@@ -8,6 +8,7 @@
 
     <style name="TextColor" parent="android:Theme.Holo.Light">
         <item name="android:textColor">#E0E0E0</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:typeface">monospace</item>
     </style>
 

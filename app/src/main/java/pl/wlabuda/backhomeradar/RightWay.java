@@ -56,7 +56,6 @@ public class RightWay extends Activity implements SensorEventListener{
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ActionBar actionBar = getActionBar();
-        //actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
 
 		dystans = (TextView) findViewById(R.id.dystans);
@@ -70,9 +69,9 @@ public class RightWay extends Activity implements SensorEventListener{
         Stop.setEnabled(false);
         Start.setEnabled(false);
         Reset.setEnabled(false);
-        Start.setTextColor(Color.GRAY);
-        Stop.setTextColor(Color.GRAY);
-        Reset.setTextColor(Color.GRAY);
+        Start.setTextColor(Color.DKGRAY);
+        Stop.setTextColor(Color.DKGRAY);
+        Reset.setTextColor(Color.DKGRAY);
 
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
 
@@ -103,18 +102,23 @@ public class RightWay extends Activity implements SensorEventListener{
                     mySensors.get(0), SensorManager.SENSOR_DELAY_NORMAL);
             sersorrunning = true;
         } else {
-            Toast.makeText(this, "Brak czujnika orientacji", Toast.LENGTH_LONG)
-                    .show();
-            sersorrunning = false;
-            finish();
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(getString(R.string.cantUseOrient))
+                    .setCancelable(false)
+                    .setNegativeButton(getString(R.string.finish), new DialogInterface.OnClickListener() {
+                        public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                            dialog.cancel();
+                            finish();
+                        }
+                    });
+            final AlertDialog alert = builder.create();
+            alert.show();
         }
 
-//		Toast.makeText(
-//				this,
-//				"Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.",
-//				Toast.LENGTH_LONG).show();
-//		Toast.makeText(this, "Naciśnij STOP aby odnaleźć drogę powrotną.",
-//				Toast.LENGTH_LONG).show();
+		Toast.makeText(
+				this,
+				getString(R.string.toast1),
+				Toast.LENGTH_LONG).show();
 
         Reset.setOnClickListener(new OnClickListener() {
             @Override
@@ -124,7 +128,11 @@ public class RightWay extends Activity implements SensorEventListener{
                 zmienna = false;
                 Global.wybor = 5;
                 Start.setTextColor(Color.GREEN);
-                Reset.setTextColor(Color.WHITE);
+                Reset.setTextColor(Color.DKGRAY);
+                dystans.setText("0.0");
+                dystans.setTextColor(Color.GRAY);
+                Start.setText("Start");
+                Stop.setText("Stop");
             }
         });
 	}
@@ -138,7 +146,7 @@ public class RightWay extends Activity implements SensorEventListener{
                         startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                     }
                 })
-                .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.finish), new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
                         dialog.cancel();
                         finish();
@@ -182,7 +190,7 @@ public class RightWay extends Activity implements SensorEventListener{
 		public float locALo = 0;
 		private double locBLa;
 		private double locBLo;
-        int zaokr = (int) Math.pow(10, 5);;
+        int zaokr = (int) Math.pow(10, 7);
 
 		public void onLocationChanged(final Location loc) {
 			if (loc != null) {
@@ -202,7 +210,8 @@ public class RightWay extends Activity implements SensorEventListener{
                     Start.setEnabled(true);
                     Start.setTextColor(Color.GREEN);
                 }
-                waiting.setText("");
+                waiting.setText(getString(R.string.info));
+                waiting.setTextColor(Color.MAGENTA);
 
 				Start.setOnClickListener(new OnClickListener() {
 
@@ -211,11 +220,13 @@ public class RightWay extends Activity implements SensorEventListener{
                         Stop.setEnabled(true);
                         Stop.setTextColor(Color.GREEN);
                         Start.setEnabled(false);
-                        Start.setTextColor(Color.WHITE);
+                        Start.setTextColor(Color.DKGRAY);
+                        Start.setText(getString(R.string.saved));
                         zmienna = true;
 						locALa = (float) loc.getLatitude();
 						locALo = ((float) loc.getLongitude());
-
+                        Toast.makeText(RightWay.this, getString(R.string.toast2),
+                                Toast.LENGTH_LONG).show();
 					}
 
 				});
@@ -224,9 +235,10 @@ public class RightWay extends Activity implements SensorEventListener{
 					@Override
 					public void onClick(View v) {
                         Stop.setEnabled(false);
-                        Stop.setTextColor(Color.WHITE);
+                        Stop.setTextColor(Color.DKGRAY);
                         Reset.setTextColor(Color.RED);
                         Reset.setEnabled(true);
+                        Stop.setText(getString(R.string.saved));
                         zmienna = true;
 
 						locBLa = ((float) loc.getLatitude());
@@ -240,10 +252,8 @@ public class RightWay extends Activity implements SensorEventListener{
 						locB.setLongitude(locBLo);
 
                         //Global.bearing = locA.bearingTo(locB);
-                        //System.out.println("**********************1 "+Global.bearing);
 
 						distance = locA.distanceTo(locB);
-                        //System.out.println("**********************2 "+distance);
                         c = distance;
 						c *= zaokr;
 						c = Math.round(c);
@@ -313,8 +323,8 @@ public class RightWay extends Activity implements SensorEventListener{
         @Override
         public void onSensorChanged(SensorEvent event) {
             // TODO Auto-generated method stub
-            myCompassView.updateDirection((float) event.values[0]);
-            Global.angel = (float) event.values[0];
+            myCompassView.updateDirection(event.values[0]);
+            Global.angel = event.values[0];
         }
     };
 

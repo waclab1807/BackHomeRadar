@@ -4,34 +4,23 @@
     <eat-comment/>
     <string name="about">O autorze</string>
     <string name="action_settings" translatable="false">Settings</string>
-    <string name="actual">Aktualne współrzędne to:</string>
-    <string name="actualProg">Aktualnie:</string>
-    <string name="alert">UWAGA! Obiekt wyszedł poza wyznaczony obszar!\nWysyłam wiadomość na numer:\n</string>
+    <string name="actual">Twoje aktualne współrzędne to:</string>
     <string name="app_name">BackHomeRadar</string>
     <string name="backButton">Naciśnij cofnij jeszcze raz, aby wyjść.</string>
-    <string name="badPhnumber">Sprawdź numer!</string>
-    <string name="cantUse">Nie możesz używać aplikacji bez GPS</string>
-    <string name="emptyNumber">Podaj numer!</string>
+    <string name="cantUse">Nie możesz używać aplikacji bez GPS.</string>
+    <string name="cantUseOrient">Aplikacje nie będzie działać bez czujnika orientacji.</string>
+    <string name="distance">Dystans: </string>
     <string name="finish">Zakończ</string>
-    <string name="giveNumber">Podaj numer telefonu na jaki wysłać powiadomienie:</string>
-    <string name="gps" translatable="false">Compass</string>
     <string name="gpsDialog">GPS wyłączony, chcesz go włączyć?</string>
-    <string name="hello" translatable="false">Znajdź drogę powrotną</string>
     <string name="info">W budynku GPS może być niedokładny!</string>
     <string name="latt">Szerokość:</string>
     <string name="longt">Długość:</string>
-    <string name="main">Aplikacja do kontroli obiektu w określonym obszarze</string>
     <string name="moment">szukam...</string>
-    <string name="newPosition">Nowe współrzędne:\n</string>
-    <string name="no">NIE</string>
-    <string name="noGSM">Przykro mi, to urządzenie nie może wysyłać SMS.</string>
-    <string name="noPhnumber">Najpierw podaj numer!</string>
-    <string name="off">Wyłącz</string>
-    <string name="on">Włącz</string>
-    <string name="prog">Ustaw obszar:</string>
-    <string name="sms">Obiekt wyszedł poza wyznaczony obszar!\nJego współrzędne to:\n</string>
-    <string name="sms2">Pamiętaj, aby ponownie ustawić aplikację.</string>
-    <string name="startApp">1.Podaj numer telefonu, \n2.Ustaw wielkość obszaru, \n3.Kliknij włącz.</string>
+    <string name="saved">Zapisano</string>
+    <string name="start">Zapamiętaj pozycję startową</string>
+    <string name="stop">Zapamiętaj pozycję końcową</string>
+    <string name="toast1">Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.</string>
+    <string name="toast2">Naciśnij STOP aby odnaleźć drogę powrotną.</string>
     <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
     <string name="yes">TAK</string>
     <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values/styles.xml -->
@@ -51,6 +40,7 @@
     </style>
     <style name="TextColor" parent="android:Theme.Holo.Light">
         <item name="android:textColor">#E0E0E0</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:typeface">monospace</item>
     </style>
 </resources>
