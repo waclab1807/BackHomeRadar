@@ -7,7 +7,7 @@
     <string name="longt">Długość:</string>
     <string name="latt">Szerokość:</string>
     <string name="moment">szukam...</string>
-    <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
+    <string name="waiting">Poczekaj, aż GPS odczyta współrzędne</string>
     <string name="start">Zapamiętaj pozycję startową -></string>
     <string name="stop">Zapamiętaj pozycję końcową -></string>
     <string name="saved">Zapisano</string>

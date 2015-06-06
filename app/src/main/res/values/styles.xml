@@ -8,7 +8,7 @@
 
     <style name="TextColor" parent="android:Theme.Holo.Light">
         <item name="android:textColor">#E0E0E0</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:typeface">monospace</item>
     </style>
 
@@ -24,13 +24,13 @@
         <!--<item name="android:background">#33691E</item>&lt;!&ndash;#90A4AE    #212121&ndash;&gt;-->
         <item name="android:background">@drawable/zielsmall</item>
         <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-        <item name="android:height">75dp</item>
+        <item name="android:height">55dp</item>
     </style>
 
     <style name="MyActionBarTitleText"
         parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@android:color/holo_green_light</item>
-        <item name="android:textSize">32dp</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">monospace</item>
     </style>

@@ -3,7 +3,6 @@
     <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values-sv/strings.xml -->
     <eat-comment/>
     <string name="about">Om författaren</string>
-    <string name="action_settings" translatable="false"/>
     <string name="actual">Aktuella koordinater:</string>
     <string name="app_name">BackHomeRadar</string>
     <string name="backButton">Tryck tillbaka igen för att avsluta.</string>

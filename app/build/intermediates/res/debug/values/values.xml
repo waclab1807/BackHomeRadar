@@ -20,13 +20,14 @@
     <string name="stop">Zapamiętaj pozycję końcową -></string>
     <string name="toast1">Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.</string>
     <string name="toast2">Przejdź się kawałek i naciśnij STOP aby odnaleźć drogę powrotną.</string>
-    <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
+    <string name="waiting">Poczekaj, aż GPS odczyta współrzędne</string>
     <string name="yes">TAK</string>
     <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
         <item name="android:textColor">#00FF00</item>
         <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">12sp</item>
     </style>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
@@ -37,17 +38,17 @@
         <!--<item name="android:background">#33691E</item>&lt;!&ndash;#90A4AE    #212121&ndash;&gt;-->
         <item name="android:background">@drawable/zielsmall</item>
         <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-        <item name="android:height">75dp</item>
+        <item name="android:height">55dp</item>
     </style>
     <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@android:color/holo_green_light</item>
-        <item name="android:textSize">32dp</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">monospace</item>
     </style>
     <style name="TextColor" parent="android:Theme.Holo.Light">
         <item name="android:textColor">#E0E0E0</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:typeface">monospace</item>
     </style>
 </resources>

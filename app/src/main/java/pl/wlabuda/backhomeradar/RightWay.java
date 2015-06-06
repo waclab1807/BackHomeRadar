@@ -191,6 +191,7 @@ public class RightWay extends Activity implements SensorEventListener{
 		private double locBLa;
 		private double locBLo;
         int zaokr = (int) Math.pow(10, 7);
+        int zaokr1 = (int) Math.pow(10, 3);
 
 		public void onLocationChanged(final Location loc) {
 			if (loc != null) {
@@ -255,13 +256,13 @@ public class RightWay extends Activity implements SensorEventListener{
 
 						distance = locA.distanceTo(locB);
                         c = distance;
-						c *= zaokr;
+						c *= zaokr1;
 						c = Math.round(c);
-						c /= zaokr;
+						c /= zaokr1;
 						    //x = locALa - actualLa;
 						    //y = locALo - actualLo;
 						// zielone
-						if (c <= 15) {
+						if (distance <= 15) {
                             dystans.setTextColor(Color.GREEN);
 							dystans.setText("" + c + " m");
 							// 1
@@ -270,7 +271,7 @@ public class RightWay extends Activity implements SensorEventListener{
 							// }
 						}
 						// zolte
-						if (c > 15 && c < 99) {
+						if (distance > 15 && distance < 99) {
                             dystans.setTextColor(Color.YELLOW);
 							dystans.setText("" + c + " m");
 							// 1
@@ -279,7 +280,7 @@ public class RightWay extends Activity implements SensorEventListener{
 							// }
 						}
 						// czerwone
-						if (c >= 999) {
+						if (distance >= 999) {
                             dystans.setTextColor(Color.RED);
 							dystans.setText("" + c / 1000 + " km");
 							// 1
@@ -287,7 +288,7 @@ public class RightWay extends Activity implements SensorEventListener{
 							Global.wybor = 1;
 							// }
 						}
-						if (c <= 3) {
+						if (distance <= 3) {
 							Global.wybor = 4;
 						}
 					}
