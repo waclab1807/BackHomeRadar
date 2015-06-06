@@ -20,7 +20,7 @@
     <string name="start">Zapamiętaj pozycję startową</string>
     <string name="stop">Zapamiętaj pozycję końcową</string>
     <string name="toast1">Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.</string>
-    <string name="toast2">Naciśnij STOP aby odnaleźć drogę powrotną.</string>
+    <string name="toast2">Przejdź się kawałek i naciśnij STOP aby odnaleźć drogę powrotną.</string>
     <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
     <string name="yes">TAK</string>
     <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values/styles.xml -->

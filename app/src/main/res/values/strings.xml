@@ -18,10 +18,8 @@
     <string name="finish">Zakończ</string>
     <string name="gpsDialog">GPS wyłączony, chcesz go włączyć?</string>
     <string name="yes">TAK</string>
-    <string name="cantUseOrient">Aplikacje nie będzie działać bez czujnika orientacji.</string>
+    <string name="cantUseOrient">Aplikacja nie będzie działać bez czujnika orientacji.</string>
     <string name="toast2">Przejdź się kawałek i naciśnij STOP aby odnaleźć drogę powrotną.</string>
     <string name="info">W budynku GPS może być niedokładny!</string>
-
-    <string name="cantUse">Nie możesz używać aplikacji bez GPS.</string>
 
 </resources>

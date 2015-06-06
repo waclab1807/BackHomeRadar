@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BackHomeRadar</string>
+    <string name="yes">так</string>
+    <string name="waiting">Подождите, пока вы не прочитать GPS координаты</string>
+    <string name="moment">я ищу...</string>
+    <string name="finish">отделка</string>
+    <string name="gpsDialog">GPS выключен, вы хотите, чтобы включить его?</string>
+    <string name="info">В середине здания GPS может лежать!</string>
+    <string name="latt">широта</string>
+    <string name="longt">долгота</string>
+    <string name="about">об авторе</string>
+    <string name="actual">Текущие координаты:</string>
+    <string name="backButton">Нажмите снова, чтобы выйти.</string>
+    <string name="distance">расстояние</string>
+    <string name="cantUseOrient">Приложение не будет работать без ориентации датчика.</string>
+    <string name="saved">Записан</string>
+    <string name="start">Помните исходное положение</string>
+    <string name="stop">Сохранить конечную позицию</string>
+    <string name="toast1">Нажмите кнопку START, чтобы сохранить координаты места, откуда вы отправились.</string>
+    <string name="toast2">Поднимитесь немного и нажмите СТОП, чтобы найти свой путь домой.</string>
+</resources>

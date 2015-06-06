@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BackHomeRadar</string>
+    <string name="yes">ANO</string>
+    <string name="waiting">Počkejte GPS souřadnice</string>
+    <string name="moment">hledat...</string>
+    <string name="finish">Výjezd</string>
+    <string name="gpsDialog">GPS vypnout, chcete povolit?</string>
+    <string name="info">Ve středu budovy GPS může ležet!</string>
+    <string name="latt">Zeměpisná šířka:</string>
+    <string name="longt">Zeměpisná délka:</string>
+    <string name="about">O autorovi</string>
+    <string name="actual">Aktuální popisují souřadnice:</string>
+    <string name="backButton">Stiskněte znovu pro opuštění.</string>
+    <string name="distance">Vzdálenost</string>
+    <string name="cantUseOrient">Aplikace nebude fungovat bez orientace senzoru.</string>
+    <string name="saved">Uložena</string>
+    <string name="start">Pamatovat pozycję Startovní</string>
+    <string name="stop">Uložte koncové polohy</string>
+    <string name="toast1">Stiskněte tlačítko START pro uložení souřadnic místa, ze kterého jste vyrazili.</string>
+    <string name="toast2">Jděte se trochu a stiskněte tlačítko STOP najít cestu domů.</string>
+</resources>
