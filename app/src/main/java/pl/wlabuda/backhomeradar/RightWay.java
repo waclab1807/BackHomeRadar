@@ -220,7 +220,7 @@ public class RightWay extends Activity implements SensorEventListener{
                         Stop.setEnabled(true);
                         Stop.setTextColor(Color.GREEN);
                         Start.setEnabled(false);
-                        Start.setTextColor(Color.DKGRAY);
+                        Start.setTextColor(Color.WHITE);
                         Start.setText(getString(R.string.saved));
                         zmienna = true;
 						locALa = (float) loc.getLatitude();
@@ -235,7 +235,7 @@ public class RightWay extends Activity implements SensorEventListener{
 					@Override
 					public void onClick(View v) {
                         Stop.setEnabled(false);
-                        Stop.setTextColor(Color.DKGRAY);
+                        Stop.setTextColor(Color.WHITE);
                         Reset.setTextColor(Color.RED);
                         Reset.setEnabled(true);
                         Stop.setText(getString(R.string.saved));

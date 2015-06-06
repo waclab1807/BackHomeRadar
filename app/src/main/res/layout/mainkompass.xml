@@ -6,7 +6,7 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="10dp"
-    android:background="@drawable/metal"
+    android:background="@drawable/kk"
     android:showDividers="middle"
     android:divider="@drawable/linear"
     ><!--"#000"-->
@@ -139,7 +139,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_weight="2"
+        android:layout_weight="2.5"
         android:layout_width="0dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
 
     <Button
         android:layout_width="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:theme="@style/TextColor"
         android:layout_height="wrap_content"
         android:text="Reset"

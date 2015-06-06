@@ -13,9 +13,12 @@ public final class R {
     public static final class drawable {
         public static final int author=0x7f020000;
         public static final int backhomeradaricon=0x7f020001;
-        public static final int linear=0x7f020002;
-        public static final int metal=0x7f020003;
+        public static final int kk=0x7f020002;
+        public static final int linear=0x7f020003;
         public static final int objectcontrol=0x7f020004;
+        public static final int ziel=0x7f020005;
+        public static final int ziel1=0x7f020006;
+        public static final int zielsmall=0x7f020007;
     }
     public static final class id {
         public static final int dystans=0x7f06000b;
@@ -38,26 +41,25 @@ public final class R {
     }
     public static final class string {
         public static final int about=0x7f040000;
-        public static final int action_settings=0x7f040001;
-        public static final int actual=0x7f040002;
-        public static final int app_name=0x7f040003;
-        public static final int backButton=0x7f040004;
-        public static final int cantUse=0x7f040005;
-        public static final int cantUseOrient=0x7f040006;
-        public static final int distance=0x7f040007;
-        public static final int finish=0x7f040008;
-        public static final int gpsDialog=0x7f040009;
-        public static final int info=0x7f04000a;
-        public static final int latt=0x7f04000b;
-        public static final int longt=0x7f04000c;
-        public static final int moment=0x7f04000d;
-        public static final int saved=0x7f04000e;
-        public static final int start=0x7f04000f;
-        public static final int stop=0x7f040010;
-        public static final int toast1=0x7f040011;
-        public static final int toast2=0x7f040012;
-        public static final int waiting=0x7f040013;
-        public static final int yes=0x7f040014;
+        public static final int action_settings=0x7f040013;
+        public static final int actual=0x7f040001;
+        public static final int app_name=0x7f040002;
+        public static final int backButton=0x7f040003;
+        public static final int cantUseOrient=0x7f040004;
+        public static final int distance=0x7f040005;
+        public static final int finish=0x7f040006;
+        public static final int gpsDialog=0x7f040007;
+        public static final int info=0x7f040008;
+        public static final int latt=0x7f040009;
+        public static final int longt=0x7f04000a;
+        public static final int moment=0x7f04000b;
+        public static final int saved=0x7f04000c;
+        public static final int start=0x7f04000d;
+        public static final int stop=0x7f04000e;
+        public static final int toast1=0x7f04000f;
+        public static final int toast2=0x7f040010;
+        public static final int waiting=0x7f040011;
+        public static final int yes=0x7f040012;
     }
     public static final class style {
         public static final int AlertDialogCustom=0x7f050000;
@@ -65,6 +67,7 @@ public final class R {
          */
         public static final int AppTheme=0x7f050001;
         public static final int MyActionBar=0x7f050002;
-        public static final int TextColor=0x7f050003;
+        public static final int MyActionBarTitleText=0x7f050003;
+        public static final int TextColor=0x7f050004;
     }
 }

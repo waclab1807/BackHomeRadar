@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values-en/strings.xml -->
+    <eat-comment/>
+    <string name="about">About author</string>
+    <string name="actual">Current coordinates:</string>
     <string name="app_name">BackHomeRadar</string>
-    <string name="yes">YES</string>
-    <string name="waiting">Wait for GPS coordinates</string>
-    <string name="moment">searching...</string>
+    <string name="backButton">Press back once again to exit.</string>
+    <string name="cantUseOrient">The application will not operate without the sensor orientation.</string>
+    <string name="distance">Distance</string>
     <string name="finish">Exit</string>
     <string name="gpsDialog">GPS is off, turn it on?</string>
     <string name="info">Inside the building GPS can lie!</string>
     <string name="latt">Latitude</string>
     <string name="longt">Longitude</string>
-    <string name="about">About author</string>
-    <string name="actual">Current coordinates:</string>
-    <string name="backButton">Press back once again to exit.</string>
-    <string name="distance">Distance</string>
-    <string name="cantUseOrient">The application will not operate without the sensor orientation.</string>
+    <string name="moment">searching...</string>
     <string name="saved">Saved</string>
     <string name="start">Save the start position -></string>
     <string name="stop">Save the end position -></string>
     <string name="toast1">Press START to save the coordinates of the place from which you set off.</string>
     <string name="toast2">Go up a bit and press STOP to find their way home.</string>
+    <string name="waiting">Wait for GPS coordinates</string>
+    <string name="yes">YES</string>
 </resources>

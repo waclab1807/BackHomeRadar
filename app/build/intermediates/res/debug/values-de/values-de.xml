@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="about">Autor</string>
+    <string name="actual">Aktuelle Koordinaten:</string>
     <string name="app_name">BackHomeRadar</string>
-    <string name="yes">JA</string>
-    <string name="waiting">Warten Sie auf GPS-Koordinaten</string>
-    <string name="moment">suchen...</string>
+    <string name="backButton">Drücken Sie noch einmal zurück, um zu beenden.</string>
+    <string name="cantUseOrient">Die Applikation wird nicht ohne die Sensorausrichtung zu betreiben.</string>
+    <string name="distance">Distanz</string>
     <string name="finish">Ende</string>
     <string name="gpsDialog">GPS ausgeschaltet ist, schalten Sie ihn ein?</string>
     <string name="info">In der Mitte des Hauses GPS kann lügen!</string>
     <string name="latt">Breite</string>
     <string name="longt">Länge</string>
-    <string name="about">Autor</string>
-    <string name="actual">Aktuelle Koordinaten:</string>
-    <string name="backButton">Drücken Sie noch einmal zurück, um zu beenden.</string>
-    <string name="distance">Distanz</string>
-    <string name="cantUseOrient">Die Applikation wird nicht ohne die Sensorausrichtung zu betreiben.</string>
+    <string name="moment">suchen...</string>
     <string name="saved">Gespeichert</string>
     <string name="start">Speichern Sie die Startposition -></string>
     <string name="stop">Speichern Sie die Endposition -></string>
     <string name="toast1">Drücken Sie START, um die Koordinaten des Ortes, von dem aus Sie losfahren zu speichern.</string>
     <string name="toast2">Gehen Sie ein wenig und drücken Sie STOP, um den Weg nach Hause zu finden.</string>
+    <string name="waiting">Warten Sie auf GPS-Koordinaten</string>
+    <string name="yes">JA</string>
 </resources>

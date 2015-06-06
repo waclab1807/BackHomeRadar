@@ -8,8 +8,8 @@
     <string name="latt">Szerokość:</string>
     <string name="moment">szukam...</string>
     <string name="waiting">Poczekaj, aż GPS odczyta wpółrzędne</string>
-    <string name="start">Zapamiętaj pozycję startową</string>
-    <string name="stop">Zapamiętaj pozycję końcową</string>
+    <string name="start">Zapamiętaj pozycję startową -></string>
+    <string name="stop">Zapamiętaj pozycję końcową -></string>
     <string name="saved">Zapisano</string>
     <string name="distance">Dystans: </string>
     <string name="toast1">Naciśnij START aby zapamiętać współrzędne miejsca, z którego wyruszasz.</string>

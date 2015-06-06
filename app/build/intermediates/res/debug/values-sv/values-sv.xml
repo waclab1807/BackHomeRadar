@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values-sv/strings.xml -->
+    <eat-comment/>
+    <string name="about">Om författaren</string>
+    <string name="action_settings" translatable="false"/>
+    <string name="actual">Aktuella koordinater:</string>
     <string name="app_name">BackHomeRadar</string>
-    <string name="yes">JA</string>
-    <string name="waiting">Vänta på GPS-koordinater</string>
-    <string name="moment">söka...</string>
+    <string name="backButton">Tryck tillbaka igen för att avsluta.</string>
+    <string name="cantUseOrient">Programmet kommer inte att fungera utan sensororienteringen.</string>
+    <string name="distance">Avstånd</string>
     <string name="finish">Utgång</string>
     <string name="gpsDialog">GPS är avstängd, slå på den?</string>
     <string name="info">I mitten av byggnaden GPS kan ligga!</string>
     <string name="latt">Latitud</string>
     <string name="longt">Longitud</string>
-    <string name="action_settings" translatable="false"></string>
-    <string name="about">Om författaren</string>
-    <string name="actual">Aktuella koordinater:</string>
-    <string name="backButton">Tryck tillbaka igen för att avsluta.</string>
-    <string name="distance">Avstånd</string>
-    <string name="cantUseOrient">Programmet kommer inte att fungera utan sensororienteringen.</string>
+    <string name="moment">söka...</string>
     <string name="saved">Sparade</string>
     <string name="start">Kom ihåg startposition -></string>
     <string name="stop">Spara slutpositionen -></string>
     <string name="toast1">Tryck på START för att spara koordinaterna för den plats från vilken du iväg.</string>
     <string name="toast2">Gå upp en bit och tryck på STOP för att hitta sin väg hem.</string>
+    <string name="waiting">Vänta på GPS-koordinater</string>
+    <string name="yes">JA</string>
 </resources>
