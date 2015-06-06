@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/media/waclab1807/154E-C0EC/Radar/app/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="about">Autor</string>
+    <string name="actual">Las coordenadas reales:</string>
+    <string name="app_name">BackHomeRadar</string>
+    <string name="backButton">Presione de nuevo para salir.</string>
+    <string name="cantUseOrient">La aplicación no funcionará sin la orientación del sensor.</string>
+    <string name="distance">Distancia</string>
+    <string name="finish">Salida</string>
+    <string name="gpsDialog">GPS está apagado, encenderlo?</string>
+    <string name="info">En el centro de la construcción GPS puede mentir!</string>
+    <string name="latt">Latitud</string>
+    <string name="longt">Longitud</string>
+    <string name="moment">búsqueda...</string>
+    <string name="saved">Se registra</string>
+    <string name="start">Recuerde posición inicial -></string>
+    <string name="stop">Guardar la posición final -></string>
+    <string name="toast1">Pulse START para guardar las coordenadas del lugar desde el que de salir.</string>
+    <string name="toast2">Sube un bit de parada y pulse para encontrar su camino a casa.</string>
+    <string name="waiting">Espere a que las coordenadas GPS</string>
+    <string name="yes">Sí</string>
+</resources>
